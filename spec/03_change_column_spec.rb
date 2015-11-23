@@ -11,6 +11,7 @@ describe 'student' do
     CreateStudents.new.change
     AddGradeAndBirthdateToStudents.new.change
     ChangeDatatypeForBirthdate.new.change
+    Student.reset_column_information
   end
 
   it 'has a birthday as a datetime datatype' do
