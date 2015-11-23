@@ -9,12 +9,17 @@ RSpec.configure do |config|
   config.order = 'default'
 
   config.before do
-    reset_database
+    # reset_database
   end
 end
 
 def reset_database
   migrate_db
+end
+
+def drop_db
+  sql = "DROP TABLE IF EXISTS students"
+  ActiveRecord::Base.connection.execute(sql)
 end
 
 def clean_database
