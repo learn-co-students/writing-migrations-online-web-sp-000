@@ -1,18 +1,22 @@
+require 'active_record'
+include ActiveRecord::Tasks
+
+DatabaseTasks.db_dir = 'db'
+DatabaseTasks.migrations_paths = ['db/migrate']
+
+load 'active_record/railties/databases.rake'
+
+task :console => :environment do
+  Pry.start
+end
+
 task :environment do
-  ENV["SCHOOL_ENV"] ||= "development"
   require_relative 'config/environment'
 end
 
 namespace :db do
-  task :migrate => :environment do
-    migrate_db
-  end
-
-  task :drop => :environment do 
+  task :drop => :environment do
+    puts "Dropping tables"
     drop_db
   end
-end
-
-task :console => :environment do
-  Pry.start
 end

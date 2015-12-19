@@ -1,5 +1,3 @@
-require_relative '../lib/model/student.rb'
-
 ENV["SCHOOL_ENV"] = "test"
 
 require_relative '../config/environment'
