@@ -30,4 +30,4 @@ Finally, we will change a column type, `string` to `datetime`. Same as before, y
 
 Again, same setup as before. Be sure to use the `change_column` method. It takes three necessary arguments: `change_column(table_name, column_name, type)`.
 
-<a href='https://learn.co/lessons/writing-migrations' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/writing-migrations' title='Let's Write Some Migrations'>Let's Write Some Migrations</a> on Learn.co and start learning to code for free.</p>
