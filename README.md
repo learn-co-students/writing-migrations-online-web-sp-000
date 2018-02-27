@@ -30,4 +30,15 @@ Finally, we will change a column type, `string` to `datetime`. Same as before, y
 
 Again, same setup as before. Be sure to use the `change_column` method. It takes three necessary arguments: `change_column(table_name, column_name, type)`.
 
+## Active Record 5.x migration syntax update
+
+***NOTE***: As of Active Record 5.x, we can no longer inherit directly from `ActiveRecord::Migration` and must instead specify which version of Active Record / Rails the migration was written for. If we were writing a migration for Active Record 5.1, we would inherit from `ActiveRecord::Migration[5.1]`. Don't worry too much about this until you get to the Rails section. Until then, if you encounter an error like this...
+```
+StandardError: Directly inheriting from ActiveRecord::Migration is not supported. Please specify the Rails release the migration was written for:
+
+  class CreateDogs < ActiveRecord::Migration[4.2]
+```
+...simply add `[4.2]` to the end of `ActiveRecord::Migration`, exactly as the error message instructs.
+
+
 <a href='https://learn.co/lessons/writing-migrations' data-visibility='hidden'>View this lesson on Learn.co</a>
