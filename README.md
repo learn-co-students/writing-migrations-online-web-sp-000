@@ -1,5 +1,5 @@
 # Let's Write Some Migrations
-##Objectives
+## Objectives
 
 1. Write your own migrations
 2. Run a migration to create a table
