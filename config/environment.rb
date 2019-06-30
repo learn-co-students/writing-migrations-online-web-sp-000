@@ -18,3 +18,4 @@ def drop_db
     DB.execute("DROP TABLE #{table}")
   end
 end
+
