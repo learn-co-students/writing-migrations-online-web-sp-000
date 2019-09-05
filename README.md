@@ -68,10 +68,10 @@ encounter an error like this...
 ```text
 StandardError: Directly inheriting from ActiveRecord::Migration is not supported. Please specify the Rails release the migration was written for:
 
-  class CreateDogs < ActiveRecord::Migration[4.2]
+  class CreateDogs < ActiveRecord::Migration[5.2]
 ```
 
-...simply add `[4.2]` to the end of `ActiveRecord::Migration`, exactly as the
+...simply add `[5.2]` to the end of `ActiveRecord::Migration`, exactly as the
 error message instructs.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/writing-migrations'>Writing Our Own Migrations</a> on Learn.co and start learning to code for free.</p>
