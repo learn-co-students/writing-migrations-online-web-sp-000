@@ -18,3 +18,11 @@ def drop_db
     DB.execute("DROP TABLE #{table}")
   end
 end
+
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/students.sqlite"
+)
+# require_relative "../db/migrate/01_create_students.rb"
+# require_relative "../db/migrate/02_add_grade_and_birthday_to_students.rb"
+# require_relative "../db/migrate/03_change_datatype_for_birthdate"
