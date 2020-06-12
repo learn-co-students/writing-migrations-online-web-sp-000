@@ -1,5 +1,17 @@
+require 'rake'
+require 'active_record'
+require 'yaml/store'
+require 'ostruct'
+require 'date'
+
 require 'bundler/setup'
 Bundler.require
+
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/students.sqlite"
+)
+ 
 
 Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
 Dir[File.join(File.dirname(__FILE__), "../lib/support", "*.rb")].each {|f| require f}
@@ -18,3 +30,5 @@ def drop_db
     DB.execute("DROP TABLE #{table}")
   end
 end
+
+
