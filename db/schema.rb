@@ -12,4 +12,7 @@
 
 ActiveRecord::Schema.define(version: 1) do
 
+  create_table "name", force: :cascade do |t|
+  end
+
 end
