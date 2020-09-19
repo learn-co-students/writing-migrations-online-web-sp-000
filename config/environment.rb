@@ -8,6 +8,8 @@ ENV["SCHOOL_ENV"] ||= "development"
 
 DBRegistry[ENV["SCHOOL_ENV"]].connect!
 DB = ActiveRecord::Base.connection
+#where is the point that establish the connection to the file?
+#answer: it's in the lib/support/connection_adapter.rb
 
 if ENV["SCHOOL_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
