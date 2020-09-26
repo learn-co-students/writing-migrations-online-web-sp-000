@@ -19,9 +19,3 @@ def drop_db
   end
 end
 
-ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :database => "db/students.sqlite"
-)
-
-require_relative '../lib/support/connection_adapter.rb'
